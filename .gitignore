@@ -1,0 +1,22 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+
+venv/
+.venv/
+klasifikasi-venv/
+sintami-venv/
+
+.python-version
+
+# .ipynb_checkpoints/
+
+saved_model/
+saved_model.zip
+
+new-dataset/
+image-testing/
+
+.DS_Store
