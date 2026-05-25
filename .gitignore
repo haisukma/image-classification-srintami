@@ -13,7 +13,7 @@ sintami-venv/
 
 # .ipynb_checkpoints/
 
-saved_model/
+# saved_model/
 saved_model.zip
 
 new-dataset/
