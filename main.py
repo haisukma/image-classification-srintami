@@ -53,6 +53,11 @@ async def classify(file: UploadFile = File(...)):
         prediction.values()
     )[0].numpy()
 
+    # prediction = prediction[0]
+
+    # for i in range(len(class_names)):
+    #     print(f"{class_names[i]}: {prediction[i]:.4f}")
+
     predicted_class = class_names[
         np.argmax(prediction)
     ]
