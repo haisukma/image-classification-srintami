@@ -15,8 +15,11 @@ sintami-venv/
 
 # saved_model/
 saved_model.zip
+new-dataset2.zip
 
-new-dataset/
+new-dataset2/
 image-testing/
+other/
+demo/
 
 .DS_Store

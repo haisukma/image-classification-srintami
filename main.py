@@ -21,8 +21,13 @@ model = tf.saved_model.load(
 infer = model.signatures["serving_default"]
 
 class_names = [
+    "aksesoris cold",
+    "aksesoris hot",
+    "arcing horn",
     "bracing",
-    "insulator"
+    "isolator",
+    "jumper",
+    "pondasi"
 ]
 
 @app.get("/")
@@ -36,7 +41,7 @@ async def classify(file: UploadFile = File(...)):
 
     image = Image.open(file.file).convert("RGB")
 
-    image = image.resize((224, 224))
+    image = image.resize((256, 256))
 
     img_array = np.array(image)
 
