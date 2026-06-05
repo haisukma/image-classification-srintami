@@ -21,7 +21,7 @@ class_names = [
 
 # Copy path disini untuk testing
 image = Image.open(
-    "/Users/diajeng/Documents/newsrintami/demo/insulator2.jpg"
+    "/Users/diajeng/Documents/newsrintami/demo/insulator4.jpg"
 ).convert("RGB")
 
 # image = image.resize((1024, 1024))
@@ -47,12 +47,12 @@ prediction = list(
     prediction.values()
 )[0].numpy()
 
-# prediction = prediction[0]
+prediction = prediction[0]
 
-# # print("Hasil Prediksi:", prediction)
+# print("Hasil Prediksi:", prediction)
 
-# for i in range(len(class_names)):
-#     print(f"{class_names[i]}: {prediction[i]:.4f}")
+for i in range(len(class_names)):
+    print(f"{class_names[i]}: {prediction[i]:.4f}")
 
 predicted_class = class_names[
     np.argmax(prediction)
