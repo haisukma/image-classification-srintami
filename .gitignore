@@ -14,10 +14,10 @@ sintami-venv/
 # .ipynb_checkpoints/
 
 # saved_model/
-saved_model.zip
-new-dataset3.zip
+saved_model5.zip
+new-dataset.zip
 
-new-dataset3/
+new-dataset5/
 image-testing/
 other/
 demo/

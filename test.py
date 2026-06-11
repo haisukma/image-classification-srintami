@@ -21,10 +21,10 @@ class_names = [
 
 # Copy path disini untuk testing
 image = Image.open(
-    "/Users/diajeng/Documents/newsrintami/demo/insulator5.jpg"
+    "/Users/diajeng/Documents/newsrintami/demo/sisi cold.jpg"
 ).convert("RGB")
 
-# image = image.resize((1024, 1024))
+# image = image.resize((1024, 1024))b
 # image = image.resize(((224, 224)))
 image = image.resize((256, 256))
 
