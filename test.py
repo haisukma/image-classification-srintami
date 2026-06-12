@@ -2,10 +2,14 @@ import tensorflow as tf
 import numpy as np
 from PIL import Image
 import time
+from pathlib import Path
+import tensorflow as tf
 
-model = tf.saved_model.load(
-    "/Users/diajeng/Documents/newsrintami/saved_model"
-)
+BASE_DIR = Path(__file__).parent
+
+model_path = BASE_DIR / "saved_model"
+
+model = tf.saved_model.load(str(model_path))
 
 infer = model.signatures["serving_default"]
 
@@ -19,10 +23,12 @@ class_names = [
     "pondasi"
 ]
 
-# Copy path disini untuk testing
-image = Image.open(
-    "/Users/diajeng/Documents/newsrintami/demo/sisi cold.jpg"
-).convert("RGB")
+image_path = input("Masukkan path gambar: ")
+
+image = Image.open(image_path).convert("RGB")
+# image = Image.open(
+#     "/Users/diajeng/Documents/image-classification-newsrintami/demo/AJAX_PDKBSLG016833d7ae31fcf.JPG"
+# ).convert("RGB")
 
 # image = image.resize((1024, 1024))b
 # image = image.resize(((224, 224)))
