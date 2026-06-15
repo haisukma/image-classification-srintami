@@ -59,17 +59,16 @@ Untuk melakukan prediksi/klasifikasi gambar:
 python test.py
 ```
 
+## Menjalankan API
+
+Untuk melakukan prediksi/klasifikasi gambar:
+
+```bash
+uvicorn main:app
+```
+
 ## Menonaktifkan Virtual Environment
 
 ```bash
 deactivate
 ```
-
-## Menguji Gambar Baru
-
-1. Siapkan gambar yang ingin diuji.
-2. Ubah path gambar pada file `test.py`.
-3. Jalankan:
-
-```bash
-python test.py

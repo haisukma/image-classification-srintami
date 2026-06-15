@@ -7,7 +7,7 @@ import tensorflow as tf
 
 BASE_DIR = Path(__file__).parent
 
-model_path = BASE_DIR / "saved_model"
+model_path = BASE_DIR / "saved_model5"
 
 model = tf.saved_model.load(str(model_path))
 
