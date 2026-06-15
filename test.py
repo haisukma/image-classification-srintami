@@ -30,8 +30,6 @@ image = Image.open(image_path).convert("RGB")
 #     "/Users/diajeng/Documents/image-classification-newsrintami/demo/AJAX_PDKBSLG016833d7ae31fcf.JPG"
 # ).convert("RGB")
 
-# image = image.resize((1024, 1024))b
-# image = image.resize(((224, 224)))
 image = image.resize((256, 256))
 
 img_array = np.array(image)

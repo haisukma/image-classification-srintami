@@ -3,10 +3,9 @@ import os
 os.environ["TF_ENABLE_ONEDNN_OPTS"] = "0"
 
 from fastapi import FastAPI, File, UploadFile
-
 import tensorflow as tf
 import numpy as np
-
+from pathlib import Path
 from PIL import Image
 
 tf.config.threading.set_inter_op_parallelism_threads(1)
@@ -14,9 +13,11 @@ tf.config.threading.set_intra_op_parallelism_threads(1)
 
 app = FastAPI()
 
-model = tf.saved_model.load(
-    "/Users/diajeng/Documents/newsrintami/saved_model"
-)
+BASE_DIR = Path(__file__).parent
+
+model_path = BASE_DIR / "saved_model"
+
+model = tf.saved_model.load(str(model_path))
 
 infer = model.signatures["serving_default"]
 
