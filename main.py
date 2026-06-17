@@ -28,6 +28,7 @@ class_names = [
     "bracing",
     "isolator",
     "jumper",
+    "other",
     "pondasi"
 ]
 
@@ -51,6 +52,8 @@ async def classify(file: UploadFile = File(...)):
         axis=0
     ).astype(np.float32)
 
+    
+
     prediction = infer(
         tf.constant(img_array)
     )
@@ -59,7 +62,11 @@ async def classify(file: UploadFile = File(...)):
         prediction.values()
     )[0].numpy()
 
-    # prediction = prediction[0]
+    prediction = prediction[0]
+
+    # print("jumlah output model:", len(prediction))
+
+    # print("jumlah class_names:", len(class_names)) 
 
     # for i in range(len(class_names)):
     #     print(f"{class_names[i]}: {prediction[i]:.4f}")
