@@ -26,7 +26,7 @@ class_names = [
     "aksesoris hot",
     "arcing horn",
     "bracing",
-    "isolator",
+    "insulator",
     "jumper",
     "other",
     "pondasi"
