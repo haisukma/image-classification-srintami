@@ -22,8 +22,8 @@ model = tf.saved_model.load(str(model_path))
 infer = model.signatures["serving_default"]
 
 class_names = [
-    "aksesoris cold",
-    "aksesoris hot",
+    "aksesoris sisi cold",
+    "aksesoris sisi hot",
     "arcing horn",
     "bracing",
     "insulator",
